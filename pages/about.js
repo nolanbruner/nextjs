@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Link from "next/link"
 import dayjs from 'dayjs';
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import TaskBar from '../components/TaskBar';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
@@ -23,7 +23,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 export default function about() {
-    const [value, setValue] = useState(dayjs())
+    // const [Value, setValue] = useState({})
     return (
         <>
             <TaskBar />
@@ -37,10 +37,10 @@ export default function about() {
                                     // orientation="landscape"
 
                                     openTo="day"
-                                    value={value}
-                                    onChange={(newValue) => {
-                                        setValue(newValue);
-                                    }}
+                                    // value={Value}
+                                    // onChange={(newValue) => {
+                                    //     setValue(newValue);
+                                    // }}
 
                                     renderInput={(params) => <TextField {...params} sx={{ color: "black" }} />}
                                 />
