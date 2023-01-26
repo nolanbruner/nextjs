@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Link from 'next/link';
 
-export default function TaskBar() {
+const TaskBar=()=> {
   return (
     <>
       <AppBar color="primary">
@@ -23,3 +23,4 @@ export default function TaskBar() {
     </>
   );
 }
+export default TaskBar

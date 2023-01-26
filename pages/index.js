@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import TaskBar from '../components/TaskBar';
 import Box from '@mui/material/Box';
 import styles from '../styles/Home.module.css';
 import { Input } from '@mui/material';
-
+import TaskBar from "../components/TaskBar"
+import Animation from '../components/animation';
 export default function Home() {
   const [animalInput, setAnimalInput] = useState('');
   const [result, setResult] = useState();
