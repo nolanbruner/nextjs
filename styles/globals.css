@@ -86,7 +86,7 @@ body {
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb)); */
+  color:white;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -105,3 +105,49 @@ a {
     color-scheme: dark;
   }
 } */
+
+.container {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.AppLogo {
+  height: 40vmin;
+  pointer-events: none;
+  position:absolute;
+}
+.AppLogoReverse {
+  /* height: 30vmin; */
+  pointer-events: none;
+  position:absolute;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .AppLogo {
+    animation: App-logo-spin infinite 15s linear;
+  }
+  .AppLogoReverse {
+    animation: App-logo-reverse-spin infinite 60s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes App-logo-reverse-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

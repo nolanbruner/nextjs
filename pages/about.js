@@ -5,8 +5,7 @@ import React, {useState } from 'react'
 import TaskBar from '../components/TaskBar';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-
+import * as layouts from "./style"
 import  Grid from '@mui/material/Grid';
 import Paper from "@mui/material/Paper"
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -23,40 +22,43 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 export default function about() {
-    // const [Value, setValue] = useState({})
+    const [value, setValue] = useState("")
     return (
         <>
             <TaskBar />
 
             <main className={styles.main}>
-                <Grid container spacing={2}>
-                    <Grid item xs={4}>
+                <layouts.Bod background="white" height="auto" width="80vw" >
+                    <h1>hi</h1>
+                <layouts.grid display="grid" grid-gap="5px" padding="10px" width="100%">
+
+                    <layouts.Bod background="grey" width="25vw" height="25vh" m="5px"><iframe src="https://weather.com/weather/hourbyhour/l/8be8bdd801c0f9c8b772c4cf0ae8702b177837870df34376f89130ac14fb8e12#detailIndex4"></iframe></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw"  height="25vh" m="5px"><iframe src="https://weather.com/weather/radar/interactive/l/8be8bdd801c0f9c8b772c4cf0ae8702b177837870df34376f89130ac14fb8e12"></iframe></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw"  height="25vh" m="5px"><iframe src="https://reactjs.org/docs/components-and-props.html" width="100%" height="100%"></iframe></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw"  height="25vh" m="5px"><iframe src="http://google.com"></iframe></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw" height="25vh" m="5px"><iframe src=""></iframe></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw" height="25vh" m="5px"></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw"  height="25vh" m="5px"></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw" height="25vh" m="5px"></layouts.Bod>
+                    <layouts.Bod background="grey" width="25vw" height="25vh" m="5px"></layouts.Bod>
+{/*                    
                         <Item>
                             <LocalizationProvider sx={{ color: "black" }} dateAdapter={AdapterDayjs} >
                                 <StaticDatePicker
                                     // orientation="landscape"
 
                                     openTo="day"
-                                    // value={Value}
-                                    // onChange={(newValue) => {
-                                    //     setValue(newValue);
-                                    // }}
+                                    value={value}
+                                    onChange={(newValue) => {
+                                        setValue(newValue);
+                                    }}
 
                                     renderInput={(params) => <TextField {...params} sx={{ color: "black" }} />}
                                 />
                             </LocalizationProvider>
-                        </Item>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Item>xs=4</Item>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <Item>xs=4</Item>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Item>xs=8</Item>
-                    </Grid>
-                </Grid>
+                        </Item> */}
+                    </layouts.grid>
+                    </layouts.Bod>
             </main>
         </>
     )

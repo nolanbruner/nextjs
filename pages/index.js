@@ -5,6 +5,7 @@ import Box from "@mui/material/Box"
 import styles from '../styles/Home.module.css'
 import Form from "@mui/material/FormGroup"
 import { Input } from "@mui/material";
+import Animation from "../components/animation";
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
   const [result, setResult] = useState();
@@ -37,19 +38,20 @@ export default function Home() {
   return (
     <>
       <TaskBar />
-      <main className={styles.main}>
+      <Animation/>
+      <main className="container">
         <Box>
         <h3 className={styles.className}>Ask Me Anything</h3>
         <form onSubmit={onSubmit}>
           <Input
-            sx={{width:"40vw"}}
+            sx={{width:"40vw",color:"white",margin:"auto"}}
             type="text"
             name="animal"
             placeholder="Enter an Question"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <Input type="submit" value="Generate Answer" />
+          <Input type="submit" sx={{color:"white"}} value="Generate Answer" />
         </form>
         <Box sx={{width:"60vw"}}>{result}</Box>
         </Box>
