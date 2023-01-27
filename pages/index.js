@@ -38,25 +38,25 @@ export default function Home() {
 
   return (
     <>
-      <TaskBar />
-      <Animation/>
-      <main className="container">
-        <Box>
+      {/* <TaskBar /> */}
+      <div>Hello</div>
+      {/* <main className="container">
+        <div>
           <h3 className={styles.className}>Ask Me Anything</h3>
           <form onSubmit={onSubmit}>
             <Input
-              sx={{ width: '40vw', color:"white"}}
+              sx={{ width: '40vw', color: "white" }}
               type="text"
               name="animal"
               placeholder="Enter an Question"
               value={animalInput}
               onChange={e => setAnimalInput(e.target.value)}
             />
-            <Input type="submit" value="Generate Answer" sx={{color:"white"}} />
+            <Input type="submit" value="Generate Answer" sx={{ color: "white" }} />
           </form>
-          <Box sx={{ width: '60vw' }}>{result}</Box>
-        </Box>
-      </main>
+          <Box pt="30px"><h2>{result}</h2></Box>
+        </div>
+      </main> */}
     </>
   );
 }
