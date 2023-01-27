@@ -45,14 +45,14 @@ export default function Home() {
           <h3 className={styles.className}>Ask Me Anything</h3>
           <form onSubmit={onSubmit}>
             <Input
-              sx={{ width: '40vw' }}
+              sx={{ width: '40vw', color:"white"}}
               type="text"
               name="animal"
               placeholder="Enter an Question"
               value={animalInput}
               onChange={e => setAnimalInput(e.target.value)}
             />
-            <Input type="submit" value="Generate Answer" />
+            <Input type="submit" value="Generate Answer" sx={{color:"white"}} />
           </form>
           <Box sx={{ width: '60vw' }}>{result}</Box>
         </Box>

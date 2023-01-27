@@ -6,9 +6,9 @@ import Link from 'next/link';
 const TaskBar=()=> {
   return (
     <>
-      <AppBar color="primary">
-        <Toolbar variant="dense">
-          <Box sx={{ pr: 6 }}>
+      <AppBar color="primary" >
+        <Toolbar variant="dense" >
+          <Box sx={{ pr: 6 }} >
             <Link href="/" color="inherit">
               Home
             </Link>
