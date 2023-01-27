@@ -38,10 +38,11 @@ export default function Home() {
 
   return (
     <>
-      {/* <TaskBar /> */}
-      <div>Hello</div>
-      {/* <main className="container">
-        <div>
+      <TaskBar />
+      <Animation />
+
+      <main className="container">
+        <Box>
           <h3 className={styles.className}>Ask Me Anything</h3>
           <form onSubmit={onSubmit}>
             <Input
@@ -55,8 +56,8 @@ export default function Home() {
             <Input type="submit" value="Generate Answer" sx={{ color: "white" }} />
           </form>
           <Box pt="30px"><h2>{result}</h2></Box>
-        </div>
-      </main> */}
+        </Box>
+      </main>
     </>
   );
 }

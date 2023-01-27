@@ -5,7 +5,7 @@ import Image from "next/image"
 import Box from "@mui/material/Box"
 const Animation=()=> {
     return (
-        <Box height="10vh" pt="0">
+        <Box height="10vh" >
             <div className="container">
                 <Image src={dotted} className="AppLogo" alt="logo" width="150" height="150" />
                 <Image src={dotted} className="AppLogoReverse" alt="logo" height="100" />
