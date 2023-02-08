@@ -10,12 +10,12 @@ const TaskBar=()=> {
         <Toolbar variant="dense" >
           <Box sx={{ pr: 6 }} >
             <Link href="/" color="inherit">
-              Home
+              ChatGPT
             </Link>
           </Box>
           <Box sx={{ pr: 6 }}>
-            <Link href="/about" color="inherit">
-              Calendar
+            <Link href="/finance" color="inherit">
+              Finance
             </Link>
           </Box>
         </Toolbar>

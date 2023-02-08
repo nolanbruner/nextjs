@@ -8,6 +8,10 @@ import Paper from '@mui/material/Paper';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import * as lineChart from "../components/lineChart"
+import * as barChart from "../components/barChart"
+
+import { Line, Bar } from 'react-chartjs-2';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -23,9 +27,10 @@ export default function about() {
       <TaskBar />
       <main className={styles.main}>
         <Grid container spacing={2}>
-          <Grid item xs={4}>
+          <Grid item xs={6}>
             <Item>
-              <LocalizationProvider
+            <Bar options={barChart.options} data={barChart.data} />
+              {/* <LocalizationProvider
                 sx={{ color: 'black' }}
                 dateAdapter={AdapterDayjs}>
                 <StaticDatePicker
@@ -39,14 +44,14 @@ export default function about() {
                     <TextField {...params} sx={{ color: 'black' }} />
                   )}
                 />
-              </LocalizationProvider>
+              </LocalizationProvider> */}
             </Item>
           </Grid>
-          <Grid item xs={8}>
-            <Item>xs=4</Item>
+          <Grid item xs={6}>
+            <Line options={lineChart.options} data={lineChart.data} />
           </Grid>
           <Grid item xs={4}>
-            <Item>xs=4</Item>
+          
           </Grid>
           <Grid item xs={8}>
             <Item>xs=8</Item>
