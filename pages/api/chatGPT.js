@@ -34,9 +34,11 @@ export default async function (req, res) {
       model: 'text-davinci-003',
       prompt: generatePrompt(animal),
       temperature: 0.6,
+      max_tokens:50,
+
     });
 
-    res.status(200).json({ result: completion.data.choices[0].text });
+    res.status(200).json({ result: completion.data.choices[0].text});
   } catch (error) {
     // Consider adjusting the error handling logic for your use case
     if (error.response) {
@@ -62,8 +64,11 @@ function generatePrompt(animal) {
   return `Answer the Questions
 
 Question: How many sides are on a coin?
-Answer: two
+Answer: two.
 
-Question: ${capitalizedAnimal}
+Question:Why is grass green?
+Answer:Grass is green because of the presence of chlorophyll throughout the leaves and stems.
+
+Question: ${capitalizedAnimal} ?
 Answer:`;
 }

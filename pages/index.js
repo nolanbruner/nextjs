@@ -11,7 +11,7 @@ export default function Home() {
   async function onSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch('/api/hello', {
+      const response = await fetch('/api/chatGPT', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -20,6 +20,7 @@ export default function Home() {
       });
 
       const data = await response.json();
+      console.log(data)
       if (response.status !== 200) {
         throw (
           data.error ||
@@ -55,7 +56,7 @@ export default function Home() {
             />
             <Input type="submit" value="Generate Answer" sx={{ color: "white" }} />
           </form>
-          <Box pt="30px"><h2>{result}</h2></Box>
+          <Box pt="30px" width="60vw"><h2>{result}</h2></Box>
         </Box>
       </main>
     </>

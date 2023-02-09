@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import TaskBar from '../components/TaskBar';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
@@ -10,6 +10,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import * as lineChart from "../components/lineChart"
 import * as barChart from "../components/barChart"
+import { getNews } from './api/finance';
 
 import { Line, Bar } from 'react-chartjs-2';
 
@@ -22,6 +23,31 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function about() {
+  // let data = [];
+  let data = {}
+  async function handle() {
+    try {
+      const response = await fetch('http://localhost:3000/api/finance', {
+
+
+      });
+      data = await response.text()
+      console.log(data)
+      if (response.status !== 200) {
+        throw (
+          data.error ||
+          new Error(`Request failed with status ${response.status}`)
+        );
+      }
+
+
+    } catch (error) {
+      // Consider implementing your own error handling logic here
+      console.error(error);
+
+    }
+  }
+  handle();
   return (
     <>
       <TaskBar />
@@ -29,7 +55,7 @@ export default function about() {
         <Grid container spacing={2}>
           <Grid item xs={6}>
             <Item>
-            <Bar options={barChart.options} data={barChart.data} />
+              <Bar options={barChart.options} data={barChart.data} />
               {/* <LocalizationProvider
                 sx={{ color: 'black' }}
                 dateAdapter={AdapterDayjs}>
@@ -51,7 +77,7 @@ export default function about() {
             <Line options={lineChart.options} data={lineChart.data} />
           </Grid>
           <Grid item xs={4}>
-          
+
           </Grid>
           <Grid item xs={8}>
             <Item>xs=8</Item>
