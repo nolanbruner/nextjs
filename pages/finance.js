@@ -26,32 +26,32 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function about() {
   // let data = [];
-  let data = {};
-  async function handle() {
-    try {
-      const response = await fetch('http://localhost:3000/api/finance', {
+  // let data = {};
+  // async function handle() {
+  //   try {
+  //     const response = await fetch('http://localhost:3000/api/finance', {
 
-      });
-      data = await response.text();
-      console.log(data);
-      if (response.status !== 200) {
-        throw (
-          data.error ||
-          new Error(`Request failed with status ${response.status}`)
-        );
-      }
+  //     });
+  //     data = await response.text();
+  //     console.log(data);
+  //     if (response.status !== 200) {
+  //       throw (
+  //         data.error ||
+  //         new Error(`Request failed with status ${response.status}`)
+  //       );
+  //     }
 
 
-    } catch (error) {
-      // Consider implementing your own error handling logic here
-      console.error(error);
+  //   } catch (error) {
+  //     // Consider implementing your own error handling logic here
+  //     console.error(error);
 
-    }
-  }
+  //   }
+  // }
 
-  useEffect(() => {
-    handle();
-  }, [])
+  // useEffect(() => {
+  //   handle();
+  // }, [])
   // if (window.screen.availWidth >= 840) {
 
   return (
@@ -59,9 +59,9 @@ export default function about() {
       <TaskBar />
       <main className="container">
         <Box pt="18px" height="90vh" width="90vw">
-
-          <TradingViewWidget />
-
+          <Item>
+            <TradingViewWidget />
+          </Item>
 
 
         </Box>

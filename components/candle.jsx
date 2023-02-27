@@ -60,7 +60,7 @@ export default function TradingViewWidget() {
     <div className='tradingview-widget-container' width = "50px">
       <div id='technical-analysis-chart-demo' />
       <div className="tradingview-widget-copyright">
-        <a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span className="blue-text">AAPL stock chart</span></a> by TradingView
+        <a href="https://www.tradingview.com/symbols/AAPL/" rel="noreferrer" target="_blank"><span className="blue-text">AAPL stock chart</span></a> by TradingView
       </div>
     </div>
   );
