@@ -59,9 +59,7 @@ export default function about() {
       <TaskBar />
       <main className="container">
         <Box pt="18px" height="90vh" width="90vw">
-          <Item>
             <TradingViewWidget />
-          </Item>
 
 
         </Box>
