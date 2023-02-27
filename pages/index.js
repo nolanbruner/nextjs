@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <TaskBar />
+      {/* <TaskBar /> */}
       <Animation />
 
       <main className="container">
