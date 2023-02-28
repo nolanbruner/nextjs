@@ -1,5 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-What you'll find is an interface to interact with ChatGPT as well as Trading view. This application is intending to be a dashboard for various tools
+What you'll find is an interface to interact with ChatGPT as well as Trading view. This application is intending to be a dashboard for various tools.
+
 click to see it in action: https://nextjs-beryl-nine-53.vercel.app/
 
 ## Getting Started
