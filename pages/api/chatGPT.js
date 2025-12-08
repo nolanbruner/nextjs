@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
   try {
     const completion = await openai.createCompletion({
-      model: "gpt-3.5-turbo-instruct", // ✅ replacement for text-davinci-003
+      model: "gpt-4o-mini", // ✅ replacement for text-davinci-003
       prompt: `Suggest an animal similar to ${req.body.animal}`,
       max_tokens: 100,
     });
