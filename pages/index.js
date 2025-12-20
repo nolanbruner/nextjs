@@ -5,7 +5,7 @@ import { Input } from '@mui/material';
 import TaskBar from "../components/TaskBar"
 import Animation from '../components/animation';
 export default function Home() {
-  const [animalInput, setAnimalInput] = useState('');
+  const [userPrompt, setuserPrompt] = useState('');
   const [result, setResult] = useState();
 
   async function onSubmit(event) {
@@ -16,7 +16,7 @@ export default function Home() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ animal: animalInput }),
+        body: JSON.stringify({ prompt: userPrompt }),
       });
 
       const data = await response.json();
@@ -29,7 +29,7 @@ export default function Home() {
       }
 
       setResult(data.result);
-      setAnimalInput('');
+      setuserPrompt('');
     } catch (error) {
       // Consider implementing your own error handling logic here
       console.error(error);
@@ -49,10 +49,10 @@ export default function Home() {
             <Input
               sx={{ width: '40vw', color: "white" }}
               type="text"
-              name="animal"
               placeholder="Enter an Question"
-              value={animalInput}
-              onChange={e => setAnimalInput(e.target.value)}
+              name="prompt"
+              value={userPrompt}
+              onChange={e => setuserPrompt(e.target.value)}
             />
             <Input type="submit" value="Generate Answer" sx={{ color: "white" }} />
           </form>

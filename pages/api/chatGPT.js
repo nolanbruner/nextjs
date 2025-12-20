@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   try {
     const completion = await openai.createCompletion({
       model: "gpt-4o-mini", // ✅ replacement for text-davinci-003
-      prompt: `Suggest an animal similar to ${req.body.animal}`,
+      prompt: `please answer this request like an expert ${req.body.prompt}`,
       max_tokens: 100,
     });
 
@@ -30,21 +30,3 @@ export default async function handler(req, res) {
   }
 }
 
-
-
-
-function generatePrompt(animal) {
-  const capitalizedAnimal =
-    animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-
-  return `Answer the Questions
-
-Question: How many sides are on a coin?
-Answer: two.
-
-Question:Why is grass green?
-Answer:Grass is green because of the presence of chlorophyll throughout the leaves and stems.
-
-Question: ${capitalizedAnimal} ?
-Answer:`;
-}
